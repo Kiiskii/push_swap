@@ -6,7 +6,7 @@
 /*   By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 11:37:44 by akiiski           #+#    #+#             */
-/*   Updated: 2025/01/06 16:07:59 by akiiski          ###   ########.fr       */
+/*   Updated: 2025/01/07 12:12:09 by akiiski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,5 @@ void	sa_sort_checker(t_data *data)
 		temp = data->stack_a[0];
 		data->stack_a[0] = data->stack_a[1];
 		data->stack_a[1] = temp;
-	}
-}
-
-void	sb_sort_checker(t_data *data)
-{
-	int	temp;
-
-	if (data->b_len > 1)
-	{
-		temp = data->stack_b[0];
-		data->stack_b[0] = data->stack_b[1];
-		data->stack_b[1] = temp;
 	}
 }

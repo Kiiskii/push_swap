@@ -6,7 +6,7 @@
 /*   By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 09:55:23 by akiiski           #+#    #+#             */
-/*   Updated: 2025/01/06 15:38:30 by akiiski          ###   ########.fr       */
+/*   Updated: 2025/01/07 12:16:09 by akiiski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	check_moves(char *line, t_data *data)
 		pb_sort_checker(data);
 	else if (ft_strncmp("pa\n", line, 3) == 0)
 		pa_sort_checker(data);
-	else if (ft_strncmp("sb\n", line, 3) == 0)
-		sb_sort_checker(data);
 	else if (ft_strncmp("sa\n", line, 3) == 0)
 		sa_sort_checker(data);
 	else if (ft_strncmp("rb\n", line, 3) == 0)

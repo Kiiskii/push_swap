@@ -6,7 +6,7 @@
 #    By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 14:07:36 by akiiski           #+#    #+#              #
-#    Updated: 2025/01/07 09:27:09 by akiiski          ###   ########.fr        #
+#    Updated: 2025/01/08 14:30:16 by akiiski          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,10 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror -I libft/
 
-SRCS = 	push_swap.c parsing.c mem_managment.c sort.c push_sort.c rotate_sort.c \
-		rev_rotate_sort.c calc_cheapest.c execute_moves_b.c execute_moves_a.c \
-		utils.c
-		
+SRCS = 	push_swap.c parsing.c mem_managment.c sort.c push_sort.c \
+		rotate_sort.c rev_rotate_sort.c calc_cheapest.c execute_moves_b.c \
+		execute_moves_a.c utils.c
+
 BSRCS = bonus/checker.c bonus/checker_push_swap.c bonus/checker_rev_rotate.c \
 		bonus/checker_rotate.c parsing.c mem_managment.c
 

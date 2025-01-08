@@ -6,7 +6,7 @@
 /*   By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 09:55:23 by akiiski           #+#    #+#             */
-/*   Updated: 2025/01/07 14:33:03 by akiiski          ###   ########.fr       */
+/*   Updated: 2025/01/08 16:37:57 by akiiski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,26 +77,25 @@ void	read_line(t_data *data)
 
 int	main(int argc, char *argv[])
 {
-	t_data	*data;
+	t_data	data;
 
-	data = &(t_data){NULL, .needs_str_array = false, .array_a_mallocd = false,
-		.array_b_mallocd = false};
+	ft_memset(&data, 0, sizeof(t_data));
 	if (argc < 2)
 		return (0);
 	if (argc == 2)
-		array_single_arg(&argv[1], data);
+		array_single_arg(&argv[1], &data);
 	else
-		array_multi_arg(argc, &argv[1], data);
-	data->stack_b = malloc(data->a_len * sizeof(int));
-	if (!data->stack_b)
-		ft_exit(data);
-	data->array_b_mallocd = true;
-	read_line(data);
-	if (!is_sorted_checker(data) || data->b_len != 0)
+		array_multi_arg(argc, &argv[1], &data);
+	data.stack_b = malloc(data.a_len * sizeof(int));
+	if (!data.stack_b)
+		ft_exit(&data);
+	data.array_b_mallocd = true;
+	read_line(&data);
+	if (!is_sorted_checker(&data) || data.b_len != 0)
 		ft_printf("KO\n");
 	else
 		ft_printf("OK\n");
-	free(data->stack_a);
-	free(data->stack_b);
+	free(data.stack_a);
+	free(data.stack_b);
 	return (0);
 }

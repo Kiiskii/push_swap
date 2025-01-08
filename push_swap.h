@@ -6,7 +6,7 @@
 /*   By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 11:59:33 by akiiski           #+#    #+#             */
-/*   Updated: 2025/01/06 14:31:09 by akiiski          ###   ########.fr       */
+/*   Updated: 2025/01/07 14:33:20 by akiiski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,12 +94,14 @@ void	pb_sort_checker(t_data *data);
 void	pa_sort_checker(t_data *data);
 void	sa_sort_checker(t_data *data);
 void	sb_sort_checker(t_data *data);
+void	ss_sort_checker(t_data *data);
 void	ra_sort_checker(t_data *data);
 void	rb_sort_checker(t_data *data);
 void	rr_sort_checker(t_data *data);
 void	rra_sort_checker(t_data *data);
 void	rrb_sort_checker(t_data *data);
 void	rrr_sort_checker(t_data *data);
+void	free_line_exit(char *line, t_data *data);
 bool	is_sorted_checker(t_data *data);
 
 #endif

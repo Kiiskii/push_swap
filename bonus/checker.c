@@ -6,7 +6,7 @@
 /*   By: akiiski <akiiski@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 09:55:23 by akiiski           #+#    #+#             */
-/*   Updated: 2025/01/07 12:16:09 by akiiski          ###   ########.fr       */
+/*   Updated: 2025/01/07 14:33:03 by akiiski          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,12 @@ bool	is_sorted_checker(t_data *data)
 	return (true);
 }
 
+void	free_line_exit(char *line, t_data *data)
+{
+	free(line);
+	ft_exit(data);
+}
+
 void	check_moves(char *line, t_data *data)
 {
 	if (ft_strncmp("pb\n", line, 3) == 0)
@@ -34,6 +40,10 @@ void	check_moves(char *line, t_data *data)
 		pa_sort_checker(data);
 	else if (ft_strncmp("sa\n", line, 3) == 0)
 		sa_sort_checker(data);
+	else if (ft_strncmp("sb\n", line, 3) == 0)
+		sb_sort_checker(data);
+	else if (ft_strncmp("ss\n", line, 3) == 0)
+		ss_sort_checker(data);
 	else if (ft_strncmp("rb\n", line, 3) == 0)
 		rb_sort_checker(data);
 	else if (ft_strncmp("ra\n", line, 3) == 0)
@@ -47,10 +57,7 @@ void	check_moves(char *line, t_data *data)
 	else if (ft_strncmp("rrr\n", line, 4) == 0)
 		rrr_sort_checker(data);
 	else
-	{
-		free(line);
-		ft_exit(data);
-	}
+		free_line_exit(line, data);
 }
 
 void	read_line(t_data *data)

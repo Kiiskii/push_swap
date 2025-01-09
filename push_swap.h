@@ -42,7 +42,7 @@ typedef struct s_data
 // Parsing
 void	array_multi_arg(int argc, char **argv, t_data *data);
 void	array_single_arg(char **argv, t_data *data);
-void	check_duplicates(t_data *data, size_t curr_index);
+void	validate_nums(t_data *data, size_t curr_index);
 void	is_valid_input(char **str, t_data *data);
 long	ft_atol(const char *nptr, t_data *data);
 

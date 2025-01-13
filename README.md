@@ -46,4 +46,4 @@ stack A. Finally I rotate the smallest value of A to the top and the sorting is 
 
 Below is a GIF that shows visually how the sorting looks.
 
-![](https://github.com/push_swap/visualize_push_swap.gif)
+![](push_swap/visualize_push_swap.gif)

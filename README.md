@@ -66,3 +66,13 @@ make
 make bonus
 make clean
 ```
+
+To run the program
+
+```bash
+ARG="put numbers here"; ./push_swap $ARG
+```
+If you want to check operation count
+```bash
+ARG="put numbers here"; ./push_swap $ARG | wc -l
+```

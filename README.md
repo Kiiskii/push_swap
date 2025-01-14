@@ -1,7 +1,7 @@
 # push_swap
 The goal of this project was to use a sorting algorithm to arrange integers in ascending order. For maximum points—which I successfully achieved—the challenge was to sort 100 integers in fewer than 700 operations and 500 integers in fewer than 5,500 operations.
 
-In this project, I implemented the "Turk" (insert) sorting algorithm to sort integers into ascending order using two stacks. The project required using a specific set of operations to achieve this. These operations are:
+In this project, I implemented a form of insert sorting to sort integers into ascending order using two stacks. The project required using a specific set of operations to achieve this. These operations are:
 - sa (swap a): Swap the first 2 elements at the top of stack a. Do nothing if there is only one or no elements.
 - sb (swap b): Swap the first 2 elements at the top of stack b. Do nothing if there is only one or no elements.
 - ss : sa and sb at the same time.
@@ -14,14 +14,11 @@ In this project, I implemented the "Turk" (insert) sorting algorithm to sort int
 - rrb (reverse rotate b): Shift down all elements of stack b by 1. The last element becomes the first one.
 - rrr : rra and rrb at the same time.
 
-## Key terms
-
-- Stack: A data structure where elements are added to and removed from the top. You can also rotate the stack if needed.
-- Target: The index in the other stack where a value belongs. For example, when pushing values to stack B, the goal is to place the value between one that is greater and one that is smaller.
-- Cost: The number of operations required to perform a move.
-- Cheapest value: The value that can be moved to its target position with the fewest operations.
-- Max & min: The largest and smallest values in a stack.
-- Mid_a & mid_b: The middle index of each stack, rounded down if necessary.
+I decided to go with this particular method of sorting, because the project wanted us to aim for low
+operation counts with particularily 100 and 500 values. I thought that algorithms like radix- or
+merge-sort would've required too complex optimizations to reach this result. If our goal was instead
+to sort fast or have low operation counts at very high amounts of values, I would have gone with
+these other algorithms.
 
 ## Algorithm
 

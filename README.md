@@ -47,3 +47,32 @@ stack A. Finally I rotate the smallest value of A to the top and the sorting is 
 Below is a GIF that shows visually how the sorting looks.
 
 ![push_swap](visualize_push_swap.gif)
+
+## Improvement points
+
+Overall I am very happy with this project. It was very fun to complete and had interesting
+challenges to tackle. I do, however, wish I did more optimizations to the algorithm to push the
+amount of operations as low as possible. 
+
+## Bonus
+
+I also managed to complete the bonus of this project. In the bonus I made a simple checker for mine,
+and others push_swap projects. The checker take operations from the standard output and executes
+them on the given int array. If the array is sorted correctly it prints "OK" in the standard output
+and "KO" when it is not sorted. You can utilize it with the actual project, because push_swap prints
+the operations it runs on the standard output. 
+This is how to make that happen:
+
+```bash
+ARG="3 5 4 2 1 0 8 7 6"; ./push_swap $ARG | ./checker $ARG
+```
+
+## Usage
+
+Clone the repository and compile using the included Makefile.
+
+```bash
+git clone https://github.com/Kiiskii/push_swap.git
+cd push_swap
+make
+```

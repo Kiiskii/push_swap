@@ -39,7 +39,7 @@ Once all but three values are in stack B (sorted in descending order), the remai
 Finally, rotate stack A so the smallest value is at the top, completing the sorting process.
 
 Below is a GIF demonstrating the sorting process. Credit for the creating the visualizer goes to
-github.com/o-reo:
+https://github.com/o-reo :
 ![push_swap](visualize_push_swap.gif)
 
 ## Improvement points
